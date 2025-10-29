@@ -1,0 +1,32 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Flask: Gramps WebAPI",
+            "type": "python",
+            "request": "launch",
+            "module": "gramps_webapi",
+            "args": [
+                "run",
+                "--port",
+                "5555",
+                "--host",
+                "0.0.0.0"
+            ],
+            "jinja": true,
+            "justMyCode": false,
+            "subProcess": true,
+        },
+        {
+            "name": "Python: Test WebAPI",
+            "type": "python",
+            "request": "launch",
+            "module": "pytest",
+            "args": [
+                "tests/test_endpoints/test_places.py"
+            ],
+            "justMyCode": false,
+            "console": "integratedTerminal"
+        }
+    ]
+}
